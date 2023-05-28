@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    <main className='bg-black min-h-screen text-white flex justify-center items-center font-principal-font'>
+    <main className='bg-black min-h-screen text-white flex justify-center items-center font-principal-font p-2'>
 
     <Weather weatherInfo={weatherInfo}/>
 
