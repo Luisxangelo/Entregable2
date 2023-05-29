@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { kelvinToCelsius, kelvinToFarenheit } from "../utils/temps"
+import loader from "./loader.jsx"
 
 const  weaatherImage ={
     "01d" :"/image/wheatericons/clearskyd.png",
@@ -33,6 +34,7 @@ const handleChangeTemp = () =>{
 console.log(weatherInfo)
   return (
     <section className="text-center grid gap-6">
+        <loader />
         <h2 className="font-bold text-2xl">{weatherInfo?.name},{weatherInfo?.sys.country}</h2>
         <section className="grid gap-4 sm:grid-cols-[1fr_auto]">
             {/* Seccion arriba */}

@@ -2,7 +2,7 @@ import './App.css'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import Weather from "./assets/components/Weather.jsx"
-
+import Loader from "./assets/components/loader.jsx"
 
 function App() {
 
@@ -32,7 +32,10 @@ function App() {
     <>
     <main className='min-h-screen text-black flex justify-center items-center font-principal-font p-2 bg-[url(/bgimage/bgclearsky.jpg)] bg-auto bg-no-repeat bg-center'>
 
-    <Weather weatherInfo={weatherInfo}/>
+    {
+      weatherInfo ? <Weather weatherInfo={weatherInfo} /> : <Loader/>
+    }
+
 
     </main>
     </>
