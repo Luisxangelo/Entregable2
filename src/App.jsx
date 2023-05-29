@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-    <main className='bg-black min-h-screen text-white flex justify-center items-center font-principal-font p-2'>
+    <main className='min-h-screen text-black flex justify-center items-center font-principal-font p-2 bg-[url(/bgimage/bgclearsky.jpg)] bg-auto bg-no-repeat bg-center'>
 
     <Weather weatherInfo={weatherInfo}/>
 

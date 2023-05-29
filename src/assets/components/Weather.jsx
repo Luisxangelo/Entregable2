@@ -2,8 +2,24 @@ import { useState } from "react"
 import { kelvinToCelsius, kelvinToFarenheit } from "../utils/temps"
 
 const  weaatherImage ={
-    "04n" :"/image/wheatericons/rainimg.png"
-
+    "01d" :"/image/wheatericons/clearskyd.png",
+    "01n" :"/image/wheatericons/clearskyn.png",
+    "02d" :"/image/wheatericons/fewscloudsd.png",
+    "02n" :"/image/wheatericons/fewscloudsn.png",
+    "03d" :"/image/wheatericons/scatteredcloudsd.png",
+    "03n" :"/image/wheatericons/scatteredcloudsd.png",
+    "04d" :"/image/wheatericons/brokencloudsn.png",
+    "04n" :"/image/wheatericons/brokencloudsn.png",
+    "09d" :"/image/wheatericons/showerraind.png",
+    "09n" :"/image/wheatericons/showerraind.png",
+    "10d" :"/image/wheatericons/raind.png",
+    "10n" :"/image/wheatericons/rainn.png",
+    "11d" :"/image/wheatericons/thunderstorm.png",
+    "11n" :"/image/wheatericons/thunderstorm.png",
+    "13d" :"/image/wheatericons/snowd.png",
+    "13n" :"/image/wheatericons/snowd.png",
+    "50d" :"/image/wheatericons/mist.png",
+    "50n" :"/image/wheatericons/mist.png"
 }
 
 const Weather = ({weatherInfo}) => {
@@ -23,7 +39,7 @@ console.log(weatherInfo)
             <article className="bg-white/70 p-2 rounded-3xl grid grid-cols-2 items-center">
             <h3 className="col-span-2 capitalize">{weatherInfo?.weather[0].description}</h3>
                 <span className="text-4xl">{iCelsius? kelvinToCelsius(weatherInfo?.main.temp):kelvinToFarenheit(weatherInfo?.main.temp)}</span>
-                <div>
+                <div className="p-4">
                 <img src={weaatherImage[weatherInfo?.weather[0].icon]} alt="" />
                 </div>
 
@@ -55,9 +71,9 @@ console.log(weatherInfo)
             </section>
                 
         </section>
-
-        <button onClick={handleChangeTemp}>Change °C / °F</button>
-
+        <div className="justify-items-center">
+        <button className="bg-white rounded-3xl h-34 w-36 shadow-xl" onClick={handleChangeTemp}>Change °C / °F</button>
+        </div>
     </section>
   )
 }
