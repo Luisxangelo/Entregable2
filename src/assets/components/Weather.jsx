@@ -72,7 +72,7 @@ console.log(weatherInfo)
                 
         </section>
         <div className="justify-items-center">
-        <button className="bg-white rounded-3xl h-34 w-36 shadow-xl" onClick={handleChangeTemp}>Change °C / °F</button>
+        <button className="bg-white rounded-3xl h-34 w-36 shadow-xl text-sky-600" onClick={handleChangeTemp}>Change °C / °F</button>
         </div>
     </section>
   )
